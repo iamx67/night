@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ночные стражи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <button id="patrol-section-btn" class="nav-btn active">Сбор ночного патруля</button>
+            <button id="report-section-btn" class="nav-btn">Составление отчёта дозора</button>
+        </nav>
+        <main class="content">
+            <section id="patrol-section" class="section active">
+                <h1>Сбор ночного патруля</h1>
+                <div class="patrol-input">
+                    <label for="members-input">Введите участников через запятую:</label>
+                    <input type="text" id="members-input" placeholder="Имя1, Имя2, Имя3">
+                    <button id="select-leaders-btn">Выбрать ведущих</button>
+                </div>
+                <div id="leaders-selection" class="leaders-selection hidden">
+                    <p>Выберите ведущих, нажимая на имена:</p>
+                    <div id="members-list" class="members-list"></div>
+                    <button id="assemble-patrol-btn">Собрать патруль</button>
+                </div>
+                <div id="patrol-output" class="output hidden"></div>
+                <div class="report-section">
+                    <h2>Составление отчёта патруля</h2>
+                    <label for="patrol-type">Тип патруля:</label>
+                    <select id="patrol-type">
+                        <option value="Ранний">Ранний</option>
+                        <option value="Поздний">Поздний</option>
+                    </select>
+                    <label for="violators">Нарушители:</label>
+                    <button id="no-violators-btn">Не было</button>
+                    <input type="text" id="violators" class="hidden" placeholder="Имя1 (ID1), Имя2 (ID2)">
+                    <button id="compose-report-btn">Составить отчёт</button>
+                    <div id="patrol-report-output" class="output hidden"></div>
+                </div>
+            </section>
+            <section id="watch-section" class="section">
+                <h1>Составление отчёта дозора</h1>
+                <div class="watch-input">
+                    <label for="watch-time">Введите часы дозора и участников:</label>
+                    <input type="text" id="watch-time" placeholder="4:00-5:00 - Имя1, Имя2">
+                    <label for="watch-violators">Нарушители:</label>
+                    <button id="no-watch-violators-btn">Не было</button>
+                    <input type="text" id="watch-violators" class="hidden" placeholder="Имя1 (ID1), Имя2 (ID2)">
+                    <button id="compose-watch-report-btn">Составить отчёт</button>
+                    <div id="watch-report-output" class="output hidden"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

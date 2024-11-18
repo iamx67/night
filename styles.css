@@ -1,0 +1,97 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: #333;
+    border: none;
+    color: #e0e0e0;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.nav-btn.active {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.patrol-input, .report-section, .watch-input {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #444;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.output {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border: 1px solid #444;
+    margin-top: 10px;
+}
+
+.members-list span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.members-list span.selected {
+    background-color: #555;
+}
